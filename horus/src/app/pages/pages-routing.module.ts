@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from "../auth/guards/auth.guard";
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from '../pages/layouts/layout.module';
-import { NgSelectModule} from '@ng-select/ng-select'; 
+import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
-import { Employ0002Component, DialogOverviewExampleDialog} from './employ0002/employ0002.component';
+import { Employ0002Component, DialogOverviewExampleDialog } from './employ0002/employ0002.component';
 import { DefaultComponent } from './default.component';
 import {
     MatAutocompleteModule,
@@ -44,7 +44,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-  } from '@angular/material';
+} from '@angular/material';
 const routes: Routes = [
     {
         "path": "",
@@ -64,13 +64,13 @@ const routes: Routes = [
                         "component": Employ0002Component
                     }
                 ]
-                
+
             },
             {
                 "path": "profile",
                 "loadChildren": "..\/pages\/profile\/profile.module#ProfileModule"
             },
-         
+
             {
                 "path": "404",
                 "loadChildren": "..\/pages\/not-found\/not-found.module#NotFoundModule"
@@ -92,8 +92,8 @@ const routes: Routes = [
 @NgModule({
     imports: [
         RouterModule.forChild(routes),
-        CommonModule, 
-        LayoutModule, 
+        CommonModule,
+        LayoutModule,
         NgSelectModule,
         FormsModule,
         MatAutocompleteModule,
@@ -133,14 +133,15 @@ const routes: Routes = [
         MatTreeModule,
     ], exports: [
         RouterModule,
-        Employ0002Component , 
+        Employ0002Component,
         DialogOverviewExampleDialog,
     ], declarations: [
         Employ0002Component,
-        DialogOverviewExampleDialog,
+        DialogOverviewExampleDialog
     ],
+    
     entryComponents: [
-        Employ0002Component, 
+        Employ0002Component,
         DialogOverviewExampleDialog,
     ],
 })

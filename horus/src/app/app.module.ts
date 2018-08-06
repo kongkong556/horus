@@ -21,11 +21,10 @@ import { thLocale } from 'ngx-bootstrap/locale';
 
 defineLocale('th', thLocale); 
 
-
 @NgModule({
     declarations: [
         PagesComponent,
-        AppComponent
+        AppComponent,
     ],
     imports: [
         LayoutModule,

@@ -3,6 +3,7 @@ import { NgSelectComponent, NgOption } from "@ng-select/ng-select";
 import { MastEmppaytype } from "../../models/mastEmppaytype";
 import { PayrollService } from "../../service/payroll-service";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material";
+import {MatDatepickerInputEvent} from '@angular/material/datepicker';
 
 
 export interface DialogData {
@@ -25,8 +26,7 @@ export class Employ0002Component implements OnInit {
   errtext: String;
   animal: string;
   name: string;
-  dateData: {dateFrom:string, dateTo:string, dateRange:string}
-
+  
   constructor(
     public dialog: MatDialog,
     private payrollService: PayrollService

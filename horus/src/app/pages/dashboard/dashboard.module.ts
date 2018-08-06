@@ -7,7 +7,8 @@ import { DefaultComponent } from '../default.component';
 import { NgSelectModule} from '@ng-select/ng-select';
 import { BsDatepickerModule,ButtonsModule , } from 'ngx-bootstrap';
 import { OwlDateTimeModule, OwlNativeDateTimeModule, OwlDateTimeIntl, OWL_DATE_TIME_LOCALE } from 'ng-pick-datetime';
-import { DatetimeComponent } from '.././datetime/datetime.component';
+ import { DatetimeComponent } from '.././datetime/datetime.component';
+ 
 
 import { 
     MatAutocompleteModule,
@@ -125,7 +126,7 @@ export class DefaultIntl extends OwlDateTimeIntl  {
         RouterModule
     ], declarations: [
         DashboardComponent,
-       DatetimeComponent
+        DatetimeComponent
     ]
 })
 

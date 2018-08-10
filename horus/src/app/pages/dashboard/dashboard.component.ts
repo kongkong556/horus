@@ -10,6 +10,7 @@ import { getDate } from '../../../../node_modules/ngx-bootstrap/chronos/utils/da
 
 
 import { BsLocaleService } from 'ngx-bootstrap/datepicker';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 
 @Component({
@@ -18,16 +19,18 @@ import { BsLocaleService } from 'ngx-bootstrap/datepicker';
     encapsulation: ViewEncapsulation.None,
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
-    datepickerModel: Date;
+    datenaja: Date;
+    aaa:Date
     date1:number;
     datenow:string;
     dateTest:string;
     month:number;
     year:number;
+    sss:string
     //dateData: {dateFrom:string, dateTo:string, dateRange:string, dateFromQuery:string, dateToQuery:string}
     dateData: {dateFrom:string, dateTo:string, dateRange:string, dateFromQuery:string, dateToQuery:string}
 
-    constructor(private _script: ScriptLoaderService, private _localeService: BsLocaleService) {
+    constructor(private _script: ScriptLoaderService, private _localeService: BsLocaleService, private config: BsDatepickerConfig) {
         setTheme('bs4');
         this._localeService.use('th');
         //dateAdapter.setLocale('th-TH');
@@ -77,6 +80,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
         this.year = event.value.getFullYear() + 543;
         this.dateTest = this.date1.toString() + "/" + this.datenow + "/" + this.year.toString();
+      }
+
+      gg(event){
+          console.log(event)
+          this.datenaja = new Date(event);
+          let k = this.datenaja.getDate();
+          this.sss = k.toString();
+
+         
       }
 
 
